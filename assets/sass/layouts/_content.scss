@@ -1,0 +1,348 @@
+.sticky {
+	background: #f1f1f1;
+}
+.gallery-caption {
+	list-style: none;
+}
+.bypostauthor {
+	list-style: none;
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+	p {
+		max-width: 40em;
+	}
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.aligncenter {
+	@include clearfix;
+	float: none;
+	margin-top: .5em;
+	margin-right: auto!important;
+	margin-bottom: .5em;
+	margin-left: auto!important;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin: 1.5em;
+}
+
+.sticky{
+	float: left;
+	padding: 20px;
+}
+.gallery-caption {}
+.bypostauthor {}
+
+/* =Breadcrumbs
+----------------------------------------------- */
+#breadcrumbs {
+	@include fontSize(14px);
+	font-family: $content;
+	padding: 20px 0 20px 50px;
+
+}
+/* =Media
+----------------------------------------------- */
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	clear: both;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-main .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-main .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-main .gallery dd {
+	margin: 0;
+}
+.site-main .gallery-columns-4 .gallery-item {
+}
+.site-main .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* =Comments
+----------------------------------------------- */
+.comment-author {
+
+	.avatar {
+		border-radius: 50%;
+		position: absolute;
+	}
+
+	font-style: italic; 
+	cite {
+		font-family: $title;
+		font-style: none;
+	    @include caps;
+		font-style: normal;
+		a { color: #000; }
+		margin-left: rem(56px);
+	}
+}
+.comment-metadata {
+	color: transparentize($base-font-color, 0.6);
+	font-family: $title;
+	font-size: 0.7em;
+	@include caps;
+	margin-bottom: 0.3em;
+	margin-left: rem(56px);
+
+	a a:visited {
+		// border-bottom: solid 1px $primary-color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.comment-content, .comment-awaiting-moderation {
+	margin-left: rem(56px);
+}
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+
+.comment-reply-link::after {
+	content: "\21B5";
+}
+#reply-title {
+	/*text-align: center; */
+}
+.form-allowed-tags { font-size: .7em; }
+
+/* =Main Content
+----------------------------------------------- */
+
+article {
+
+	&:after {
+		content: " ";
+		height: 1px;
+		width: 5em;
+		background: rgba(51, 51, 51, 0.4);
+		display: block;
+		margin: 1.625em 0;
+	}
+
+	.entry-category {
+		a {
+			border-bottom: 1px solid;
+			display: inline-block;
+			font-family: $title;
+			font-size: 0.675em;
+			font-weight: 600;
+			margin: 0 auto 1em;
+			padding: .5em 0;
+				@include caps;
+			}
+	}
+
+	.entry-title {
+		margin: 0;
+		a {
+			color: #000;
+			&:hover { color: lighten( #000, .30 ); }
+		}
+	}
+
+	.subtitle {
+		font-weight: 400;
+		color: #666;
+		text-transform: none;
+	}
+
+	.entry-content {
+		a:not(.button), a:not(.button):visited {
+			color: $primary-color;
+			// border-bottom: solid 1px $primary-color;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		p code, pre {
+			background: #F7F7F7;
+			border-radius: .25em;
+			border: 1px solid #E0E0E0;
+			font-size: 0.7em;
+			font-style: normal;
+			padding: 0.1em 0.4em;
+		}
+
+		pre {
+			padding: 1em 2em;
+			margin-bottom: 1.625em;
+		}
+	}
+	.entry-meta {
+		color: transparentize($base-font-color, 0.6);
+		font-family: $content;
+		font-size: 0.9em;
+		font-style: italic;
+		margin-bottom: 0.3em;
+
+		a, a:visited {
+			// border-bottom: solid 1px $primary-color;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.entry-tags {
+		margin: 1.625em auto;
+		a {
+			text-decoration: none !important;
+			padding: .4em;
+			background: transparentize($base-font-color, 0.6);
+			color: white;
+			font-style: normal;
+			font-size: .7em;
+			text-transform: lowercase;
+			font-family: $title;
+			letter-spacing: 1px;
+			margin: 0 .5em .5em 0;
+			white-space: nowrap;
+			display: inline-block;
+			line-height: 1;
+			&:hover { background: darken( #000, 5% ); }
+		}
+	}
+}
+
+/* =Archives
+----------------------------------------------- */
+
+.page-header {
+	margin-bottom: 1.625em;
+}
+.page-title {
+	font-size: 1rem;
+	display: inline-block;
+	border-bottom: 2px solid;
+	padding-bottom: 1em;
+	margin: 0;
+	&::before {
+		content: "\25A0";
+		color: $primary-color;
+		vertical-align: text-top;
+	}
+}
+.taxonomy-description {
+	display: inline-block;
+	padding-left: .5em;
+	font-style: italic;
+	p { margin: 0; }
+}
+
+
+// hide little horizontal rule on last element in archive view
+.archive, .blog {
+	#content article:last-child::after{
+	display: none;
+	}
+}
+
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+#content {
+
+	.entry-content {
+		a, a:visited {
+			// border-bottom: solid 1px $primary-color;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.entry-meta {
+		a, a:visited {
+			// border-bottom: solid 1px $primary-color;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

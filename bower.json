@@ -1,0 +1,12 @@
+{
+  "name": "sazerac",
+  "version": "1.0.0",
+  "homepage": "http://kathyisawesome.org",
+  "authors": [
+    "Kathy Darling <helgatheviking@gmail.com>"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.1",
+    "neat": "~1.7.2"
+  }
+}

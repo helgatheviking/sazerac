@@ -1,0 +1,39 @@
+// 2col Left Sidebar
+.left-sidebar {
+
+	h1.entry-title {
+		margin: 0;
+		text-aligin: left;
+	}
+	#main {
+		@include media($sm) {
+		}
+		@include media($md) {
+			display: flex;
+		}
+
+		#primary {
+			@include media($sm) {
+				@include span-columns(4);
+			}
+
+			@include media($md) {
+				@include span-columns(4);
+			}
+		}
+		#secondary {
+			margin-right: 1.5%;
+			@include media($sm) {
+				@include span-columns(4);
+			}
+			@include media($md) {
+				@include span-columns(2);
+			}
+		}
+	}
+
+	footer {
+		clear: both;
+		display: table;
+	}
+}

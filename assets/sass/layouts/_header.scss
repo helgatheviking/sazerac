@@ -1,0 +1,27 @@
+.site-branding {
+	clear: both;
+	margin: 1em auto 4em auto;
+
+	.site-title {
+		font-family: $title;
+		@include caps;
+		font-size: 2em;
+		margin: 0 0 .25em 0;
+		
+		a,a:visited {
+			color: $primary-font-color;
+			line-height: 1;
+			&:hover {
+				text-decoration: none;
+				color: #000;
+			}
+		}
+
+	}
+
+	.site-description {
+		font-size: 1.125em;
+		font-family: $content;
+		font-style: italic;
+	}
+}

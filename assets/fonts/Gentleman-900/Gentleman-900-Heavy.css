@@ -1,0 +1,12 @@
+/* Webfont: Gentleman900-Heavy */@font-face {
+    font-family: 'Gentleman900';
+    src: url('Gentleman-900-Heavy.eot'); /* IE9 Compat Modes */
+    src: url('Gentleman-900-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Gentleman-900-Heavy.woff') format('woff'), /* Modern Browsers */
+         url('Gentleman-900-Heavy.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Gentleman-900-Heavy.svg#Gentleman900-Heavy') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

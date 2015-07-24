@@ -1,0 +1,40 @@
+/* = Custom TinyMCE Typographic Styles
+-------------------------------------------------------------- */
+
+.accent-color { color: $action-color; }
+.alt-color { color: $medium-gray; }
+.big { @extend h1; }
+.bigger { @include huge; }
+
+.message-box {
+	border: 1px solid darkblue;
+	border-left-width: .5em;
+	color: darkblue;
+	background: lightblue;
+	padding: 1em;
+	margin-bottom: 1.625em;
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+.warning-box {
+	border-color: $action-color;
+	color: $action-color;
+	background: lighten( $action-color, 50% );
+}
+.inverted {
+	background: #000;
+	background: rgba( 0, 0, 0, .5 );
+	color: #FFF;
+	padding: .25em .5em;
+	line-height: 2em;
+}
+
+.dark {
+	.alt-color { color: #FFF; }
+}
+
+.feature {
+	.big { @include giant; }
+	.bigger { @include huge; }
+}

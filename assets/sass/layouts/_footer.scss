@@ -1,0 +1,50 @@
+#colophon {
+	clear: both;
+	padding: 1.625em 1em;
+	border-top: 1px solid #CCC;
+	.site-info {
+		margin: auto;
+		width: 100%;
+	}
+	border-top: 1px solid #CCC;
+	.site-info {
+		margin-bottom: 1.625em;
+		text-align: left;
+		@include media($md){
+			@include span-columns(3);
+			margin-bottom: 0;
+		}
+	}
+	.credits {
+		margin-bottom: 1.625em;
+		@include media($md){
+			@include span-columns(3);
+			margin-bottom: 0;
+			text-align: right;
+		}	
+	}
+
+
+}
+
+#footer-aside {
+	@include outer-container;
+	
+	.widget {
+		@include media($md) {
+			@include span-columns(2);
+			@include omega(2n);
+		}
+
+		@include media($hg) {
+			@include omega-reset(2n);
+			@include span-columns(4);
+			@include omega(4n);
+		}
+
+	}
+
+	ul {
+		list-style-type: square;
+	}
+}

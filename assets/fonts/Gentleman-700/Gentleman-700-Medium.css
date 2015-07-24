@@ -1,0 +1,12 @@
+/* Webfont: Gentleman700-Medium */@font-face {
+    font-family: 'Gentleman700';
+    src: url('Gentleman-700-Medium.eot'); /* IE9 Compat Modes */
+    src: url('Gentleman-700-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Gentleman-700-Medium.woff') format('woff'), /* Modern Browsers */
+         url('Gentleman-700-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Gentleman-700-Medium.svg#Gentleman700-Medium') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

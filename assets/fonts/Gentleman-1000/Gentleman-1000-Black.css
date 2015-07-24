@@ -1,0 +1,12 @@
+/* Webfont: Gentleman1000-Black */@font-face {
+    font-family: 'Gentleman1000';
+    src: url('Gentleman-1000-Black.eot'); /* IE9 Compat Modes */
+    src: url('Gentleman-1000-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Gentleman-1000-Black.woff') format('woff'), /* Modern Browsers */
+         url('Gentleman-1000-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Gentleman-1000-Black.svg#Gentleman1000-Black') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

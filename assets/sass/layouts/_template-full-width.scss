@@ -1,0 +1,14 @@
+.template-full-width-php, .full-width {
+
+	#primary {
+		@include fill-parent;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+
+	#secondary {
+		@include fill-parent;
+	}
+
+}

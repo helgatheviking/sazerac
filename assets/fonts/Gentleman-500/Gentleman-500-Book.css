@@ -1,0 +1,12 @@
+/* Webfont: Gentleman500-Book */@font-face {
+    font-family: 'Gentleman500';
+    src: url('Gentleman-500-Book.eot'); /* IE9 Compat Modes */
+    src: url('Gentleman-500-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Gentleman-500-Book.woff') format('woff'), /* Modern Browsers */
+         url('Gentleman-500-Book.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Gentleman-500-Book.svg#Gentleman500-Book') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

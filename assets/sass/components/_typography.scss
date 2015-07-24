@@ -1,0 +1,186 @@
+/* =Typographical Mixins/Functions
+-------------------------------------------------------------- */
+
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs —
+ * font-size: 20px;
+ * font-size: 1.25rem;
+ */
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin caps() {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =Genericons and Dashicons
+-------------------------------------------------------------- */
+@mixin dashicons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Dashicons';
+	vertical-align: middle;
+}
+
+@mixin genericons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align: middle;
+}
+
+/* =Typography
+-------------------------------------------------------------- */
+html {
+	font-size: 100%;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+	font-size-adjust: 0.5;
+}
+
+#page {
+	font-size: 1em;
+	/* equivalent to 16px */
+	line-height: 1.625em;
+	/* equivalent to 26px */
+
+	@include media($md){
+		 font-size: 1.125em;
+		/* equivalent to 18px */
+	}
+	@include media($hg){
+		 font-size: 1.3125em;
+		/* equivalent to 21px */
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include clearfix;
+	clear: both;
+	float: none;
+	text-transform: uppercase;
+	color: $primary-font-color;
+	font-family: $title;
+	line-height: 1.25;
+}
+
+h1 {
+	font-size: 2.5em;
+	
+	@include media($md) {
+		font-size: 3em;
+	}
+	@include media($hg) {
+		font-size: 3.75em;
+	}
+}
+
+h2 {
+	font-size: 1.625em;
+
+	@include media($md) {
+		font-size: 2em;
+	}
+	@include media($hg) {
+		font-size: 2.25em;
+	}
+
+}
+
+
+
+h3 {
+	font-size: 1.375em;
+
+	@include media($md) {
+		font-size: 1.5em;
+	}
+
+	@include media($hg) {
+		font-size: 1.75em;
+	}
+
+}
+
+
+h4, h5, h6 {
+	font-size: 1.125em;
+}
+
+
+
+blockquote {
+	font-size: 1.25em;
+	line-height: 1.25;
+
+	background-color: darken($base-body-color, 3%);
+	border-left: solid 5px $link-color;
+	font-style: italic;
+	padding: 1.625em;
+
+	@include media($md) {
+		font-size: 1.5em;
+		line-height: 1.45833333;
+	}
+
+}
+cite {
+	font-style: italic;
+}
+strong, b {
+	color: $primary-font-color;
+	font-family: $title;
+}
+
+p {
+  margin: 0 0 1.625em;
+}
+
+a, a:visited {
+	@include transition (all 200ms ease-in-out);
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover {
+		@include transition (all 200ms ease-in-out);
+		color: $primary-color;
+		text-decoration: underline;
+	}
+}
+ul {
+	@extend %default-ul; // Adds browser default spacing back
+	&:nth-child(n+2) {
+		margin-bottom: 0;
+	}
+}
+ol {
+	@extend %default-ol; // Adds browser default spacing back
+	&:nth-child(n+2) {
+		margin-bottom: 0;
+	}
+}
+
+
+::focus {
+  outline: $primary-color auto 5px;
+}
+::selection, ::-moz-selection {
+	background: $primary-color;
+	color: #fff;
+}
